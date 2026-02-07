@@ -10,8 +10,10 @@ function bundleMarkdown() {
   content = content.replace(srcRegex, (match, fileName) => {
     const filePath = path.join('pages', fileName);
     if (fs.existsSync(filePath)) {
-      const pageContent = fs.readFileSync(filePath, 'utf-8');
-      return `\n<!-- Start of ${fileName} -->\n${pageContent}\n<!-- End of ${fileName} -->\n`;
+      let pageContent = fs.readFileSync(filePath, 'utf-8');
+      // Strip frontmatter from included pages to avoid duplicate keys in the bundled output
+      pageContent = pageContent.replace(/^---[\s\S]*?---/, '');
+      return `\n<!-- Start of ${fileName} -->\n${pageContent.trim()}\n<!-- End of ${fileName} -->\n`;
     }
     return match;
   });

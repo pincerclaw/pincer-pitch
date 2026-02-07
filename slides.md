@@ -26,7 +26,6 @@ head:
 drawings:
   persisted: false
 css: unocss
-title: Pincer Protocol
 src: ./pages/01-pincer.md
 ---
 
