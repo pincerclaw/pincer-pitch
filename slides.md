@@ -16,7 +16,12 @@ seoMeta:
   keywords: AI Agents, 402 Payment Required, Web3, Advertising, Pincer Protocol, OpenClaw
   og:title: Pincer Protocol | Ads for AI
   og:description: The first economic incentive protocol built for the Agentic Web.
-  twitter:card: summary_large_image
+  ogImage: https://raw.githubusercontent.com/pincerclaw/branding/main/logo.webp
+  ogUrl: https://pitch.pincer.xyz
+  twitterCard: summary_large_image
+  twitterTitle: Pincer Protocol - The Future of Agentic Advertising
+  twitterDescription: Turning ad budgets into user subsidies. Stop buying attention, sponsor the decision.
+  twitterImage: https://raw.githubusercontent.com/pincerclaw/branding/main/logo.webp
 head:
   - - link
     - rel: alternate
