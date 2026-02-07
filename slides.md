@@ -17,6 +17,14 @@ seoMeta:
   og:title: Pincer Protocol | Ads for AI
   og:description: The first economic incentive protocol built for the Agentic Web.
   twitter:card: summary_large_image
+head:
+  - - link
+    - rel: alternate
+      type: text/plain
+      href: /llm.txt
+  - - meta
+    - name: ai-agent-content
+      content: /llm.txt
 drawings:
   persisted: false
 css: unocss
