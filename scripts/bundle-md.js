@@ -20,8 +20,10 @@ function bundleMarkdown() {
     fs.mkdirSync('public');
   }
 
+  // 同時提供兩種格式，滿足不同 Agent 的偏好
   fs.writeFileSync('public/pitch.md', content);
-  console.log('✅ Bundled pitch.md has been generated in public/');
+  fs.writeFileSync('public/llm.txt', content); 
+  console.log('✅ AI-readable files (pitch.md, llm.txt) generated in public/');
 }
 
 bundleMarkdown();

@@ -6,8 +6,23 @@ class: text-center
 highlighter: shiki
 lineNumbers: false
 info: |
-  ## Pincer Protocol
-  Ads for AI.
+  ## Pincer Protocol - Ads for AI
+  Pincer is a protocol that turns traditional ad budgets into user subsidies for AI agents.
+  It solves the 402 Payment Required problem by allowing brands to sponsor search fees.
+title: Pincer Protocol | Ads for AI
+seoMeta:
+  title: Pincer Protocol - The Future of Agentic Advertising
+  description: Turning ad budgets into user subsidies. Stop buying attention, sponsor the decision.
+  keywords: AI Agents, 402 Payment Required, Web3, Advertising, Pincer Protocol, OpenClaw
+  og:title: Pincer Protocol | Ads for AI
+  og:description: The first economic incentive protocol built for the Agentic Web.
+  twitter:card: summary_large_image
+head:
+  - - link
+    - rel: alternate
+      type: text/plain
+      title: AI Readable Version
+      href: ./llm.txt
 drawings:
   persisted: false
 css: unocss
@@ -49,4 +64,19 @@ src: ./pages/09-the-economy-of-free.md
 
 ---
 src: ./pages/10-the-internet-is-a-toll-road.md
+---
+
+---
+<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
+  Press Space for next page <carbon:arrow-right />
+</div>
+
+<div class="abs-br m-6 text-xl">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+    <carbon:logo-github />
+  </a>
+</div>
 ---
