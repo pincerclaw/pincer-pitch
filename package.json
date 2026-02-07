@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build && node scripts/bundle-md.js",
+    "build": "node scripts/bundle-md.js && slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
   },
