@@ -23,6 +23,6 @@ PREMIUM.<br/>BUT FREE.
 </div>
 
 <div v-click class="mt-20 text-4xl font-black italic tracking-tighter uppercase">
-<span class="text-white">Stop Buying </span><span class="text-blue-400">Attention.</span><br/>
-<span class="text-white">Sponsor the </span><span class="text-emerald-400">Decision.</span>
+<span class="text-white">Stop Buying </span><span class="text-white/30">Attention.</span><br/>
+<span class="text-white">Sponsor the </span><span class="text-red-500 shadow-sm shadow-red-500/20">Decision.</span>
 </div>
