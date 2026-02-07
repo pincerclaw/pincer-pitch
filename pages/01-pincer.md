@@ -1,3 +1,7 @@
+<div class="flex justify-center mb-8">
+  <img src="https://raw.githubusercontent.com/pincerclaw/branding/main/logo-transparent.png" class="h-40" />
+</div>
+
 # PINCER
 <div class="text-4xl font-bold tracking-widest text-red-500 mt-2">ADS FOR AI</div>
 
