@@ -22,7 +22,7 @@ PREMIUM.<br/>BUT FREE.
 </div>
 </div>
 
-<div class="mt-20 text-4xl font-black italic tracking-tighter uppercase">
+<div v-click class="mt-20 text-4xl font-black italic tracking-tighter uppercase">
 <span class="text-white">Stop Buying </span><span class="text-blue-400">Attention.</span><br/>
 <span class="text-white">Sponsor the </span><span class="text-emerald-400">Decision.</span>
 </div>
