@@ -3,35 +3,35 @@ import path from 'path';
 
 function bundle() {
   const entryFile = 'slides.md';
-  if (!fs.existsSync(entryFile)) return;
+  if (!fs.existsSync(entryFile)) {
+    console.error('slides.md not found');
+    return;
+  }
 
   const content = fs.readFileSync(entryFile, 'utf-8');
   const srcRegex = /src:\s*\.?\/pages\/(.+?\.md)/g;
   
-  let fullMarkdown = "# Pincer Protocol - Pitch Deck (Agent-Readable Version)
-
-";
+  let fullMarkdown = "# Pincer Protocol - Pitch Deck (Agent-Readable Version)\n\n";
 
   let match;
   while ((match = srcRegex.exec(content)) !== null) {
-    const filePath = path.join('pages', match[1]);
+    const fileName = match[1];
+    const filePath = path.join('pages', fileName);
     if (fs.existsSync(filePath)) {
       let pageContent = fs.readFileSync(filePath, 'utf-8');
-      pageContent = pageContent.replace(/^---[\s\S]*?---
-?/, '').trim();
-      fullMarkdown += `
-
-## Section: ${match[1]}
-${pageContent}
-
----`;
+      // Remove frontmatter
+      pageContent = pageContent.replace(/^---[\s\S]*?---\n?/, '').trim();
+      fullMarkdown += `\n\n## Section: ${fileName}\n\n${pageContent}\n\n---\n`;
     }
   }
 
-  if (!fs.existsSync('dist')) { fs.mkdirSync('dist'); }
+  // Ensure dist exists (it should after slidev build)
+  if (!fs.existsSync('dist')) {
+    fs.mkdirSync('dist', { recursive: true });
+  }
   
-  fs.writeFileSync('dist/llm.txt', fullMarkdown);
-  console.log('✅ Generated dist/llm.txt for AI Agents');
+  fs.writeFileSync(path.join('dist', 'llm.txt'), fullMarkdown);
+  console.log('✅ Successfully generated dist/llm.txt');
 }
 
 bundle();
