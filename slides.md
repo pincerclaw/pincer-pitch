@@ -22,7 +22,10 @@ head:
     - rel: alternate
       type: text/plain
       title: AI Readable Version
-      href: ./llm.txt
+      href: /llm.txt
+  - - meta
+    - name: ai-agent-content
+      content: /llm.txt
 drawings:
   persisted: false
 css: unocss
