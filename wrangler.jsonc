@@ -1,0 +1,8 @@
+{
+  "name": "pincer",
+  "compatibility_date": "2026-02-07",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  }
+}
